@@ -2,9 +2,6 @@ const express = require("express");
 
 const router = express.Router();
 
-// ─── Tarefa C — Enquete rápida ────────────────────────────────────────────────
-// Armazenamento EM MEMÓRIA (não use banco de dados neste trabalho).
-// As opções já vêm cadastradas; vocês podem trocar os nomes se quiserem.
 const opcoes = [
   { nome: "Presencial", votos: 0 },
   { nome: "Remoto", votos: 0 },
@@ -21,7 +18,7 @@ router.get("/", (req, res) => {
   }
 });
 
-// POST /enquete/voto — corpo { opcao }: incrementa o voto daquela opção.
+
 router.post("/voto", (req, res) => {
 
   const voto = req.body.opcao;
